@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MIUI EU添加国内版钱包实现刷公交卡和门卡</title>
+      <link href="/2024/01/05/MIUI-EU%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E7%89%88%E9%92%B1%E5%8C%85%E5%AE%9E%E7%8E%B0%E5%88%B7%E5%85%AC%E4%BA%A4%E5%8D%A1%E5%92%8C%E9%97%A8%E5%8D%A1/"/>
+      <url>/2024/01/05/MIUI-EU%E6%B7%BB%E5%8A%A0%E5%9B%BD%E5%86%85%E7%89%88%E9%92%B1%E5%8C%85%E5%AE%9E%E7%8E%B0%E5%88%B7%E5%85%AC%E4%BA%A4%E5%8D%A1%E5%92%8C%E9%97%A8%E5%8D%A1/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，MIUI是臃肿和卡顿的代名词。而这个现象只存在于国内版，虽然MIUI14剃刀计划使系统流畅性大幅提升，但是还不够。相比于MIUI EU（MIUI欧洲版）来说，欧洲版更加简洁、轻快、满血的FCM，而重点是<strong>无广告，无广告，无广告！</strong></p><hr><p>废话不多说，直接一个模块解决问题！今天介绍的是MIUI国际版添加小米钱包组件的模块，原作者是[华梦](<a href="https://52huameng.com/software/1614">MIUI国际版/EU版添加小米钱包和应用商店 – 华梦博客 (52huameng.com)</a>)，但是这个教程是2020年的，部分组件已经outdated了，我经过改良发布这个新模块。这个模块完全适配CAS（小米10至尊），其他MIUI14/HyperOS机型理论上也通用。不通用也不要紧，下面我来说如何修改模块来适配你自己的手机</p><ol><li><p>提取钱包APP、小米智能卡、小米智能卡组件以及银联安全组件。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/system/app/NextPay #小米智能卡相关组件</span><br><span class="line">/system/app/TSMClient #小米智能卡</span><br><span class="line">/system/app/UPTsmService #银联安全组件</span><br></pre></td></tr></table></figure><p>最简单的方法就是找你同机型国内版的兄弟麻烦一下他们。那么假如我们没有兄弟（bushi）怎么办呢，可以使用dump的方式。dump是网站上别人解好的包方便做定制版。这里我提供<a href="https://dumps.tadiphone.dev/dumps/xiaomi/cas">CAS</a>的dump，其他机型可以自己在这个网站上寻找。</p><p>而在dump中，钱包APP、小米智能卡、小米智能卡组件以及银联安全组件的位置是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/cas/product/app/MINextpay</span><br><span class="line">/cas/product/app/UPTsmService</span><br><span class="line">/cas/product/app/MITSMClient</span><br></pre></td></tr></table></figure></li><li><p>把这三个文件替换模块文件中的system/app文件夹中的文件，使用Magisk刷入即可</p></li></ol><p><a href="https://xmxk.lanzouu.com/iv0KE1k5kg2f">https://xmxk.lanzouu.com/iv0KE1k5kg2f</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小米MIX Fold 3</title>
       <link href="/2023/08/15/%E5%B0%8F%E7%B1%B3MIX-Fold-3%E2%80%94%E2%80%94%E8%BD%BB%E8%96%84%E6%8A%98%E5%8F%A0%E7%9C%9F%E6%97%97%E8%88%B0/"/>
       <url>/2023/08/15/%E5%B0%8F%E7%B1%B3MIX-Fold-3%E2%80%94%E2%80%94%E8%BD%BB%E8%96%84%E6%8A%98%E5%8F%A0%E7%9C%9F%E6%97%97%E8%88%B0/</url>
